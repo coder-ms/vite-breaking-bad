@@ -1,16 +1,16 @@
 <template>
-  <section>
+  <div class="cardChar">
     <div class="box">
       <div class="imageChar">
         <img :src="character.img" :alt="character.name">
       </div>
       <div class="info">
-        <h5>{{ character.name }}</h5>
+        <h6>{{ character.name }}</h6>
         <p class="font-weight-bold">{{ character.category }}</p>
         <p>{{ character.status }}</p>
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>
@@ -22,25 +22,29 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.box {
-  width: 100%;
-  border: 1px solid red;
+.cardChar {
+  .box {
+    width: 100%;
 
-  .imageChar {
-    padding: 10px;
-    border: 1px solid blue;
+    .imageChar {
+      height: 25vh;
 
-    img {
-      width: 100%;
-    }
+      img {
+        width: 100%;
+      }
 
-    .info {
-      padding: 2px;
+      .info {
+        padding: 5px;
 
-      border: 1px solid grey;
+        h6 {
+          text-transform: capitalize;
+          font-weight: 700;
+        }
 
-      h5 {
-        text-transform: capitalize;
+        p {
+          font-size: 14px;
+          color: rgb(221, 220, 220);
+        }
       }
     }
   }

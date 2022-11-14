@@ -16,6 +16,7 @@ export default {
 
 <style lang="scss" scoped>
 h1 {
+    color: white;
     font-weight: 700;
 }
 </style>
