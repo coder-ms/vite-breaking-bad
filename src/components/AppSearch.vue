@@ -27,8 +27,31 @@
 </template>
 
 <script>
+import { store } from '../store';
+
 export default {
     name: 'AppSearch',
+
+    data() {
+        return {
+            store,
+            statusOptions: [
+                'alive',
+                'dead',
+                'unknown'
+            ],
+        }
+    },
+    methods: {
+        searchCharacters() {
+            this.$emit('filterchar');
+        },
+        resetSearch() {
+            store.search.status = '';
+            store.search.name = '';
+            this.$emit('filterchar')
+        }
+    }
 }
 </script>
 

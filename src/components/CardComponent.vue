@@ -14,11 +14,25 @@
 </template>
 
 <script>
+
 export default {
   props: {
     character: Object
   }
 }
+/*
+import { store } from '../store';
+import CardComponent from './CardComponent.vue';
+export default {
+  name: "CharacterList",
+  components: { CardComponent },
+  data() {
+    return {
+      store
+    }
+  }
+}
+*/
 </script>
 
 <style lang="scss" scoped>

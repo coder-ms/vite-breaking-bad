@@ -1,6 +1,5 @@
 
 <template>
-    div.
     <div v-if="loading">
         Sto caricando i dati
     </div>
@@ -30,6 +29,7 @@ export default {
     color: white;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-top: 20px;
 
     .cardSection {
         width: 15%;
