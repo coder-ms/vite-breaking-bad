@@ -1,25 +1,30 @@
 <template>
     <div class="container">
-        <form class="row row-cols-lg-auto g-3 align-items-center">
+        <!--FORM-->
+        <form class="row row-cols-lg-auto g-3 align-items-center" @submit.prevent="searchCharacters">
             <div class="col-12">
-                <label>Search name</label>
-                <input type="text" class="form-control" placeholder="Search name">
+                <label class="visually-hidden" for="charactername">Search name</label>
+                <input type="text" class="form-control" id="charactername" placeholder="Search name"
+                    v-model.trim="store.search.name">
             </div>
 
+            <!--SELECT STATUS-->
             <div class="col-12">
-                <label>Search status</label>
-                <select class="form-select" id="searchStatus">
-                    <option>Choose...</option>
-                    <option>Status</option>
+                <label class="visually-hidden" for="searchStatus">Search status</label>
+                <select class="form-select" id="searchStatus" v-model="store.search.status">
+                    <option selected value="">Choose...</option>
+                    <option :value="status" v-for="(status, index) in statusOptions" :key="index">{{ status }}</option>
                 </select>
             </div>
 
+            <!--BUTTON SUBMIT-->
             <div class="col-12">
                 <button type="submit" class="btn btn-primary">Search</button>
             </div>
 
+            <!--BUTTON RESET-->
             <div class="col-12">
-                <button type="reset" class="btn btn-primary">Reset</button>
+                <button type="reset" class="btn btn-primary" @click="resetSearch">Reset</button>
             </div>
         </form>
     </div>
@@ -31,7 +36,6 @@ import { store } from '../store';
 
 export default {
     name: 'AppSearch',
-
     data() {
         return {
             store,
@@ -65,12 +69,6 @@ export default {
 
     form {
         justify-content: space-between;
-
-        .col-12 {
-            button {
-                margin-top: 15px;
-            }
-        }
     }
 }
 </style>
