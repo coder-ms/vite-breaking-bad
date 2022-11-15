@@ -2,14 +2,12 @@
 <template>
   <AppHeader title="Breaking Bad API" />
   <main>
-    <AppSearch :serchtype="searchType" />
-    <CharacterList :characters="characterList" :loading="loading" />
-    <!--
+    <AppSearch @filterchar="getCharacters" />
+    <CharacterList />
     <div v-if="store.errormessage">
       <h1> Opps ! Qualcosa è andato storto</h1>
       <p>{{ store.errormessage }}</p>
     </div>
-    -->
 
   </main>
 
