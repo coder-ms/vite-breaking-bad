@@ -27,7 +27,7 @@ export default {
     width: 100%;
 
     .imageChar {
-      height: 25vh;
+      margin-bottom: 10px;
 
       img {
         width: 100%;
@@ -35,6 +35,7 @@ export default {
 
       .info {
         padding: 5px;
+        margin-top: 10px;
 
         h6 {
           text-transform: capitalize;
