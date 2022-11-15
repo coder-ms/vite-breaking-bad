@@ -72,7 +72,7 @@ export default {
           console.log('options.params.name = ' + options.params.name);
           console.log('options.params.status = ' + options.params.status);
         }
-      console.log('endPoint = ' + this.endPoint);
+      //console.log('endPoint = ' + this.endPoint);
       console.log('apiurl = ' + apiurl);
 
       //

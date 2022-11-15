@@ -1,21 +1,28 @@
 
 <template>
-    <div v-if="loading">
+    <div v-if="store.loading">
         Sto caricando i dati
     </div>
-    <div class="struct" v-if="!loading">
-        <div class="cardSection" v-for="(item, index) in characters" :key="item.id">
+    <div class="struct" v-if="!store.loading">
+        <div class="cardSection" v-for="(item, index) in store.characterList" :key="item.id">
             <CardComponent :character="item" />
         </div>
     </div>
 </template>
 
 <script>
+
+import { store } from '../store';
 import CardComponent from './CardComponent.vue';
+
 export default {
     name: "CharacterList",
-    props: ["characters", "loading"],
     components: { CardComponent },
+    data() {
+        return {
+            store
+        }
+    }
 }
 </script>
 
