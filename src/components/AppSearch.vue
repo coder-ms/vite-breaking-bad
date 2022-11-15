@@ -1,5 +1,5 @@
 <template>
-    <div class="container d-flex justify-content-center p-4">
+    <div class="container">
         <form class="row row-cols-lg-auto g-3 align-items-center">
             <div class="col-12">
                 <label>Search name</label>
@@ -34,6 +34,20 @@ export default {
 
 <style lang="scss" scoped>
 .container {
+    display: flex;
     color: white;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+
+    form {
+        justify-content: space-between;
+
+        .col-12 {
+            button {
+                margin-top: 15px;
+            }
+        }
+    }
 }
 </style>
