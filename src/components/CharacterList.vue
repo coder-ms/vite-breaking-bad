@@ -39,7 +39,7 @@ export default {
     margin-top: 20px;
 
     .cardSection {
-        width: 15%;
+        width: 18%;
         border: 1px solid black;
         padding: 10px;
         margin-bottom: 10px;
